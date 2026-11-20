@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doorstep Detail – Car detailing that comes to you</title>
+<style>
+:root{--bg:#fbf8f3;--surface:#fff;--soft:#f3ede4;--text:#1f1c18;--muted:#6f675d;--line:#e6dfd3;--accent:#b8581f;--accent-d:#9a4816;--on-accent:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1714;--surface:#242019;--soft:#2b261f;--text:#f4efe7;--muted:#a99f91;--line:#3a342b;--accent:#e08a4c;--accent-d:#eb9c63;--on-accent:#1a1714}}
+:root[data-theme="dark"]{--bg:#1a1714;--surface:#242019;--soft:#2b261f;--text:#f4efe7;--muted:#a99f91;--line:#3a342b;--accent:#e08a4c;--accent-d:#eb9c63;--on-accent:#1a1714}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:650;letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+.nav ul a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);border:0;border-radius:980px;padding:12px 24px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-d)}
+.btn.sm{padding:7px 16px;font-size:13px}
+.btn.ghost{background:transparent;color:var(--accent);padding:12px 8px}
+.btn.ghost:hover{background:transparent;text-decoration:underline}
+@media(max-width:700px){.nav ul{display:none}}
+.hero{text-align:center;padding:96px 0 80px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.02em;margin:0 0 14px}
+h1{font-size:clamp(44px,8vw,84px);line-height:1.03;letter-spacing:-.035em;margin:0 0 20px;font-weight:700}
+.lead{font-size:clamp(18px,2.4vw,23px);color:var(--muted);max-width:620px;margin:0 auto 32px;line-height:1.4}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+section{padding:72px 0}
+section.soft{background:var(--soft)}
+h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.03em;line-height:1.08;margin:0 0 12px;font-weight:700;text-align:center}
+.sub{text-align:center;color:var(--muted);font-size:18px;max-width:560px;margin:0 auto 44px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--surface);border-radius:22px;padding:28px;border:1px solid var(--line)}
+.step b{display:block;font-size:13px;color:var(--accent);margin-bottom:10px}
+.step h3{margin:0 0 6px;font-size:21px;letter-spacing:-.02em}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px 28px;display:flex;flex-direction:column}
+.card.pop{border:2px solid var(--accent)}
+.tag{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;min-height:16px}
+.card h3{margin:0;font-size:26px;letter-spacing:-.025em}
+.price{font-size:48px;font-weight:700;letter-spacing:-.04em;margin:10px 0 4px}
+.price small{font-size:15px;color:var(--muted);font-weight:500;letter-spacing:0}
+.card ul{list-style:none;padding:0;margin:18px 0 24px;flex:1}
+.card li{padding:9px 0 9px 26px;position:relative;font-size:15px;border-top:1px solid var(--line)}
+.card li::before{content:"";position:absolute;left:2px;top:17px;width:9px;height:5px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.card .note{font-size:14px;color:var(--muted);margin:10px 0 0}
+.card .btn{text-align:center}
+@media(max-width:860px){.cards,.steps{grid-template-columns:1fr}}
+.addons{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:28px}
+.addon{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.addon b{display:flex;justify-content:space-between;gap:10px;font-size:16px}
+.addon b em{font-style:normal;color:var(--accent)}
+.addon p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.book{max-width:720px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:34px}
+.book h3{margin:26px 0 12px;font-size:15px;color:var(--muted);font-weight:600}
+.book h3:first-child{margin-top:0}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1.5px solid var(--line);border-radius:16px;padding:15px 18px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--accent)}
+.opt:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
+.opt label{display:flex;align-items:center;gap:12px;cursor:pointer;flex:1}
+.opt input{accent-color:var(--accent);width:18px;height:18px}
+.opt span.p{font-weight:600}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.total strong{font-size:34px;letter-spacing:-.03em}
+.dep{color:var(--muted);font-size:14px;margin:4px 0 20px}
+.book .btn{width:100%;padding:15px}
+#msg{margin:12px 0 0;font-size:14px;color:var(--muted);text-align:center;min-height:20px}
+.faq{max-width:720px;margin:0 auto}
+details{border-top:1px solid var(--line);padding:20px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:10px 0 0}
+footer{padding:40px 0 48px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .logo{color:var(--text);font-size:18px;display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a href="#top" class="logo">Doorstep<span> Detail</span></a>
+  <ul><li><a href="#how">How it works</a></li><li><a href="#services">Services</a></li><li><a href="#faq">FAQ</a></li></ul>
+  <a href="#book" class="btn sm">Book now</a>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+  <p class="eyebrow">Mobile car detailing</p>
+  <h1>We come to you.</h1>
+  <p class="lead">A proper hand detail, done at your home or work while you get on with your day. Nothing to drive, nothing to drop off.</p>
+  <div class="cta"><a href="#book" class="btn">Book a detail</a><a href="#services" class="btn ghost">See services ›</a></div>
+</div>
+
+<section class="soft" id="how"><div class="wrap">
+  <h2>Easy from start to finish.</h2>
+  <p class="sub">Three steps, and the car stays right where it is.</p>
+  <div class="steps">
+    <div class="step"><b>01</b><h3>Pick your detail</h3><p>Choose exterior, interior, or both, plus any extras you fancy.</p></div>
+    <div class="step"><b>02</b><h3>Choose a time</h3><p>Book a slot that suits you and pay in full to lock it in.</p></div>
+    <div class="step"><b>03</b><h3>We turn up</h3><p>We arrive with everything needed. You get a car that feels new again.</p></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <h2>Services &amp; pricing.</h2>
+  <p class="sub">Clear prices. No surprises on the day.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="tag">&nbsp;</div><h3>Exterior</h3>
+      <div class="price">$70</div>
+      <ul>
+        <li>Deep hand wash</li>
+        <li>Tyre cleaning</li>
+        <li>Exterior glass and trim care</li>
+        <li>Paint decontamination</li>
+      </ul>
+      <a href="#book" class="btn" data-pick="exterior">Book exterior</a>
+    </div>
+    <div class="card">
+      <div class="tag">&nbsp;</div><h3>Interior</h3>
+      <div class="price">$90</div>
+      <ul>
+        <li>Carpets, mats and seats: stains, grit and pet hair lifted out, then dried properly so there’s no dampness or musty smell</li>
+        <li>Leather, vinyl and plastics cleaned and refreshed with a natural, non-greasy finish</li>
+        <li>Vents, cup holders, switches and seat tracks cleared of dust and crumbs</li>
+        <li>Glass and door jambs</li>
+      </ul>
+      <a href="#book" class="btn" data-pick="interior">Book interior</a>
+    </div>
+    <div class="card pop">
+      <div class="tag">Best value</div><h3>Full detail</h3>
+      <div class="price">$145</div>
+      <p class="note" style="margin:0">Exterior and interior together. Saves $15.</p>
+      <ul>
+        <li>Everything in the Exterior detail</li>
+        <li>Everything in the Interior detail</li>
+        <li>One visit, one booking</li>
+      </ul>
+      <a href="#book" class="btn" data-pick="full">Book full detail</a>
+    </div>
+  </div>
+
+  <h2 style="margin-top:72px;font-size:clamp(26px,4vw,36px)">Optional extras.</h2>
+  <p class="sub" style="margin-bottom:0">Add to any detail when you book.</p>
+  <div class="addons">
+    <div class="addon"><b>Spray sealant <em>$25</em></b><p>Hand-applied protection for a deeper shine and easier cleaning.</p></div>
+    <div class="addon"><b>Pet hair extra <em>$20</em></b><p>Extra time for heavy pet hair on seats and carpet.</p></div>
+    <div class="addon"><b>Boot clean <em>$15</em></b><p>Vacuum and wipe down of the boot or cargo area.</p></div>
+    
+    <div class="addon"><b>Odour refresh <em>$15</em></b><p>A light, clean scent to finish the interior.</p></div>
+  </div>
+</div></section>
+
+<section class="soft" id="book"><div class="wrap">
+  <h2>Book your detail.</h2>
+  <p class="sub">Build your booking, then pick a time and pay in full.</p>
+  <div class="book">
+    <h3>1. Service</h3>
+    <div class="opts" id="svc">
+      <div class="opt"><label><input type="radio" name="s" value="70" data-n="Exterior" id="s-exterior"> Exterior detail</label><span class="p">$70</span></div>
+      <div class="opt"><label><input type="radio" name="s" value="90" data-n="Interior" id="s-interior"> Interior detail</label><span class="p">$90</span></div>
+      <div class="opt"><label><input type="radio" name="s" value="145" data-n="Full detail" id="s-full" checked> Full detail (best value)</label><span class="p">$145</span></div>
+    </div>
+    <h3>2. Extras (optional)</h3>
+    <div class="opts" id="ext">
+      <div class="opt"><label><input type="checkbox" value="25" data-n="Spray sealant"> Spray sealant</label><span class="p">$25</span></div>
+      <div class="opt"><label><input type="checkbox" value="20" data-n="Pet hair extra"> Pet hair extra</label><span class="p">$20</span></div>
+      <div class="opt"><label><input type="checkbox" value="15" data-n="Boot clean"> Boot clean</label><span class="p">$15</span></div>
+      
+      <div class="opt"><label><input type="checkbox" value="15" data-n="Odour refresh"> Odour refresh</label><span class="p">$15</span></div>
+    </div>
+    <div class="total"><span>Total</span><strong id="tot">$145</strong></div>
+    <p class="dep">You’ll choose your date and time on the next step. Payment is taken in full when you book.</p>
+    <button class="btn" id="go" type="button">Choose a time &amp; pay</button>
+    <p id="msg"></p>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Good to know.</h2>
+  <p class="sub">Quick answers to the usual questions.</p>
+  <div class="faq">
+    <details><summary>Do you need access to water and power?</summary><p>Yes, we need access to both. We’ll set everything up ourselves, so all we ask is a spot with room to work around the car.</p></details>
+    <details><summary>Do I need to be home?</summary><p>Not necessarily. As long as the car is accessible and we’ve agreed the details, you can carry on with your day.</p></details>
+    <details><summary>How long does it take?</summary><p>An exterior or interior detail is typically a couple of hours. The full detail takes longer, and heavily soiled vehicles may need extra time.</p></details>
+    <details><summary>What if it rains?</summary><p>Interior details can go ahead regardless. For exterior work we’ll happily move your booking to a dry day at no charge.</p></details>
+    <details><summary>How do payments and cancellations work?</summary><p>Payment is taken in full when you book. Cancel more than 3 days before your detail and we’ll either move you to the next available date or refund you in full, at no charge. Cancellations made within 3 days of the detail are non-refundable.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span class="logo">Doorstep<span style="color:var(--accent)"> Detail</span></span>
+  Car detailing that comes to you.
+</div></footer>
+
+<script>
+// ---- Set these once your booking tool is ready ----
+var BOOKING_URL = ""; // e.g. your Cal.com, Square Appointments or Stripe Payment Link
+// ---------------------------------------------------
+var tot=document.getElementById('tot'),msg=document.getElementById('msg');
+function calc(){
+  var t=0,names=[];
+  document.querySelectorAll('#book input:checked').forEach(function(i){t+=+i.value;names.push(i.dataset.n)});
+  tot.textContent='$'+t;return names;
+}
+document.getElementById('book').addEventListener('change',calc);
+document.querySelectorAll('[data-pick]').forEach(function(b){
+  b.addEventListener('click',function(){var r=document.getElementById('s-'+b.dataset.pick);if(r){r.checked=true;calc()}});
+});
+document.getElementById('go').addEventListener('click',function(){
+  var names=calc();
+  if(!BOOKING_URL){msg.textContent='Booking opens soon. Please check back shortly.';return}
+  var sep=BOOKING_URL.indexOf('?')>-1?'&':'?';
+  window.open(BOOKING_URL+sep+'notes='+encodeURIComponent(names.join(', ')),'_blank','noopener');
+});
+</script>
+</body>
+</html>
